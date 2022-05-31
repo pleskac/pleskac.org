@@ -1,7 +1,6 @@
 import styles from "./Page.module.css";
-import { Footer } from "../library/components/footer";
-import { Meta } from "../library/components/meta";
-import { Tabs } from "../library/tabs";
+import { Footer, Meta } from "../library/layout";
+import { Tabs } from "../library/components";
 
 const Home: React.FC = () => {
     return (

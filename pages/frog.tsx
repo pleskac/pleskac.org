@@ -1,5 +1,5 @@
 import styles from "./Page.module.css";
-import { Meta } from "../library/components/meta";
+import { Meta } from "../library/layout";
 
 const Frog: React.FC = () => {
     return (

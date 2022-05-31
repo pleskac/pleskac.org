@@ -1,7 +1,6 @@
-import { Tabs } from "../library/tabs";
+import { Tabs } from "../library/components";
 import styles from "./Page.module.css";
-import { Footer } from "../library/components/footer";
-import { Meta } from "../library/components/meta";
+import { Footer, Meta } from "../library/layout";
 
 const Blog: React.FC = () => {
     return (
