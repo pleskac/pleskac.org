@@ -1,3 +1,4 @@
+import '../styles/variables.css'
 import '../styles/globals.css'
 import * as React from 'react';
 import { AppProps } from 'next/app';
