@@ -1,18 +1,12 @@
-import { Tabs } from "../library/components";
 import styles from "./Page.module.css";
 import { Footer, Meta } from "../library/layout";
+import { Header, PageRoute } from "library/layout/header";
 
 const Blog: React.FC = () => {
     return (
         <div className={styles.container}>
             <Meta />
-            <Tabs
-                tabs={[
-                    { displayName: "Home", slug: "/" },
-                    { displayName: "Blog", slug: "/blog" },
-                ]}
-                selected={"/blog"}
-            />
+            <Header selected={PageRoute.BLOG} />
             <main className={styles.main}>
                 <p>Blog</p>
             </main>
