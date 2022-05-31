@@ -8,11 +8,6 @@ type TabTitle = {
     slug: string;
 };
 
-interface TabProps {
-    initiallySelected?: string;
-    tabs: TabTitle[];
-}
-
 const Title: React.FC<{ title: string; slug: string; selected: boolean }> = ({
     title,
     slug,
@@ -44,7 +39,7 @@ const Title: React.FC<{ title: string; slug: string; selected: boolean }> = ({
     );
 };
 
-const TitleContainer: React.FC<{ tabs: TabTitle[]; selected: string }> = ({
+export const Tabs: React.FC<{ tabs: TabTitle[]; selected: string }> = ({
     tabs,
     selected,
 }) => {
@@ -53,6 +48,7 @@ const TitleContainer: React.FC<{ tabs: TabTitle[]; selected: string }> = ({
             {tabs.map((t) => {
                 return (
                     <Title
+                        key={t.slug}
                         title={t.displayName}
                         selected={selected === t.slug}
                         slug={t.slug}
@@ -60,17 +56,5 @@ const TitleContainer: React.FC<{ tabs: TabTitle[]; selected: string }> = ({
                 );
             })}
         </nav>
-    );
-};
-
-export const Tabs: React.FC<TabProps> = ({ tabs, initiallySelected }) => {
-    const [selected, setSelected] = React.useState(
-        initiallySelected || tabs[0].slug
-    );
-
-    return (
-        <div>
-            <TitleContainer tabs={tabs} selected={selected} />
-        </div>
     );
 };

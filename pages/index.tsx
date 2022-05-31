@@ -11,6 +11,7 @@ const Home: React.FC = () => {
                     { displayName: "Home", slug: "/" },
                     { displayName: "Blog", slug: "/blog" },
                 ]}
+                selected="/"
             />
             <main className={styles.main}>
                 <p>Hello world</p>

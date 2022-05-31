@@ -11,7 +11,7 @@ const Blog: React.FC = () => {
                     { displayName: "Home", slug: "/" },
                     { displayName: "Blog", slug: "/blog" },
                 ]}
-                initiallySelected={"/blog"}
+                selected={"/blog"}
             />
             <main className={styles.main}>
                 <p>Blog</p>
