@@ -1,4 +1,4 @@
-import styles from "../Index.module.css";
+import styles from "./Footer.module.css";
 
 export const Footer: React.FC = () => (
     <footer className={styles.footer}>

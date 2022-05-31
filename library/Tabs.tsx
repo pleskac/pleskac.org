@@ -1,7 +1,7 @@
 import classnames from "classnames";
 import Link from "next/link";
 import React from "react";
-import styles from "./tabs.module.css";
+import styles from "./Tabs.module.css";
 
 type TabTitle = {
     displayName: string;

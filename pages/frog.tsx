@@ -1,11 +1,11 @@
-import styles from "./Index.module.css";
-import { Meta } from "./components/meta";
+import styles from "./Page.module.css";
+import { Meta } from "../library/components/meta";
 
 const Frog: React.FC = () => {
     return (
         <div className={styles.container}>
             <Meta />
-            What's the difference between a frog?
+            {`What's the difference between a frog?`}
         </div>
     );
 };
