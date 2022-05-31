@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 const Home: React.FC = () => {
@@ -16,7 +15,7 @@ const Home: React.FC = () => {
       </main>
 
       <footer className={styles.footer}>
-        
+        <a href='https://github.com/pleskac/pleskac.org'>Code</a>
       </footer>
     </div>
   )
