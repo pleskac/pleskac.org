@@ -3,7 +3,7 @@ import styles from "./Index.module.css";
 import { Footer } from "./components/footer";
 import { Meta } from "./components/meta";
 
-const Home: React.FC = () => {
+const Blog: React.FC = () => {
     return (
         <div className={styles.container}>
             <Meta />
@@ -22,4 +22,4 @@ const Home: React.FC = () => {
     );
 };
 
-export default Home;
+export default Blog;
