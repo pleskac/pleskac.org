@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+.title,
+.selectedTitle,
+.hoveredTitle {
+    /* Adjust */
+    padding: var(--spacing-1) var(--spacing-1)
+        calc(var(--spacing-1) + var(--title-border-size)) var(--spacing-1);
+}
+
+.hoveredTitle {
+    background-color: var(--background-1);
+}
+
+.selectedTitle {
+    font-weight: bold;
+    padding: var(--spacing-1);
+    border-bottom: var(--title-border-size) solid var(--border-color);
+}

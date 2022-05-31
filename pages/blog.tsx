@@ -12,9 +12,10 @@ const Home: React.FC = () => {
                     { displayName: "Home", slug: "/" },
                     { displayName: "Blog", slug: "/blog" },
                 ]}
+                initiallySelected={"/blog"}
             />
             <main className={styles.main}>
-                <p>Hello world</p>
+                <p>Blog</p>
             </main>
             <Footer />
         </div>
