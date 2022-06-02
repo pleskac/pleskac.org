@@ -28,7 +28,7 @@ const Title: React.FC<{ title: string; slug: string; selected: boolean }> = ({
             <a
                 onMouseEnter={onEnter}
                 onMouseLeave={onLeave}
-                className={classnames(styles.title, {
+                className={classnames(styles.title, "focus_ring", {
                     [`${styles.hoveredTitle}`]: isHovered,
                     [`${styles.selectedTitle}`]: selected,
                 })}

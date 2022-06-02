@@ -7,9 +7,7 @@
 .title,
 .selectedTitle,
 .hoveredTitle {
-    /* Adjust */
-    padding: var(--spacing-1) var(--spacing-1)
-        calc(var(--spacing-1) + var(--title-border-size)) var(--spacing-1);
+    padding: var(--spacing-1);
 }
 
 .hoveredTitle {
@@ -19,5 +17,6 @@
 .selectedTitle {
     font-weight: bold;
     padding: var(--spacing-1);
-    border-bottom: var(--title-border-size) solid var(--border-color);
+    border-bottom: var(--border-size) solid var(--border-color);
+    margin-bottom: 0;
 }

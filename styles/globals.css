@@ -15,4 +15,15 @@ a {
 
 * {
     box-sizing: border-box;
+    outline: none;
+}
+
+.focus_ring {
+    margin: var(--border-size);
+    display: flex;
+}
+
+.focus_ring:focus-within {
+    border: var(--border-size) solid var(--focus-color);
+    margin: 0;
 }

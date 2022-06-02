@@ -1,4 +1,5 @@
 import { Tabs } from "library/components";
+import { Input } from "library/components/input";
 import styles from "./Header.module.css";
 
 export const enum PageRoute {
@@ -20,7 +21,8 @@ export const Header: React.FC<HeaderProps> = ({ selected }) => (
                 selected={selected}
             />
         </div>
-        <span>pleskac.org</span>
-        <span>search?</span>
+        <div className={styles.headerSearch}>
+            <Input placeholder="search" />
+        </div>
     </div>
 );

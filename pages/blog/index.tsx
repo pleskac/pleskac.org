@@ -1,5 +1,5 @@
-import styles from "./Page.module.css";
-import { Footer, Meta } from "../library/layout";
+import styles from "pages/Page.module.css";
+import { Footer, Meta } from "library/layout";
 import { Header, PageRoute } from "library/layout/header";
 
 const Blog: React.FC = () => {
