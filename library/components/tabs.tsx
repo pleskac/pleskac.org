@@ -24,17 +24,16 @@ const Title: React.FC<{ title: string; slug: string; selected: boolean }> = ({
     };
 
     return (
-        <Link href={slug}>
-            <a
-                onMouseEnter={onEnter}
-                onMouseLeave={onLeave}
-                className={classnames(styles.title, "focus_ring", {
-                    [`${styles.hoveredTitle}`]: isHovered,
-                    [`${styles.selectedTitle}`]: selected,
-                })}
-            >
-                {title}
-            </a>
+        <Link
+            href={slug}
+            onMouseEnter={onEnter}
+            onMouseLeave={onLeave}
+            className={classnames(styles.title, "focus_ring", {
+                [`${styles.hoveredTitle}`]: isHovered,
+                [`${styles.selectedTitle}`]: selected,
+            })}
+        >
+            {title}
         </Link>
     );
 };
