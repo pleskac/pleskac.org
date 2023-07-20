@@ -40,7 +40,7 @@ export default function Home() {
             <div
                 className={css({
                     display: "grid",
-                    gridTemplateColumns: "50% 50%",
+                    gridTemplateColumns: "40% 60%",
                     height: "calc(100vh - 51px)",
                 })}
             >
