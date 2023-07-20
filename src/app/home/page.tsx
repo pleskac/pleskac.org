@@ -51,6 +51,7 @@ export default function Home() {
                         alignItems: "center",
                         justifyContent: "center",
                         padding: "50px",
+                        textAlign: "center",
                     })}
                 >
                     <span

@@ -45,6 +45,7 @@ export function NavBar(props: { selected: NavItem }) {
                 borderBottomWidth: "1px",
                 borderBottomStyle: "solid",
                 borderBottomColor: "border.subtle",
+                backgroundColor: "background",
             })}
         >
             <nav
