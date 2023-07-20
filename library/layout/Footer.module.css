@@ -1,8 +1,0 @@
-.footer {
-    display: flex;
-    flex: 1;
-    padding: var(--spacing-1);
-    border-top: 1px solid var(--border-color);
-    justify-content: flex-start;
-    align-items: center;
-}
