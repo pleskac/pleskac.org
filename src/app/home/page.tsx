@@ -1,7 +1,8 @@
 import { css } from "../../../styled-system/css";
 import { NavBar } from "../components/nav";
-import Image from "next/image";
 import Link from "next/link";
+import React from "react";
+import { RandomImage } from "./random-image";
 
 // https://icons.getbootstrap.com/icons/instagram/
 const InstagramIcon = () => {
@@ -86,12 +87,7 @@ export default function Home() {
                         overflow: "hidden",
                     })}
                 >
-                    <Image
-                        className={css({ objectFit: "cover" })}
-                        src="/reflections.jpeg"
-                        alt="Reflections of a mountain in a lake"
-                        fill
-                    />
+                    <RandomImage />
                 </div>
             </div>
         </>
