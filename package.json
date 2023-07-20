@@ -22,8 +22,9 @@
         "typescript": "5.1.6"
     },
     "devDependencies": {
+        "@pandacss/dev": "^0.7.0",
         "postcss-flexbugs-fixes": "^5.0.2",
-        "@pandacss/dev": "^0.7.0"
+        "postcss-preset-env": "^9.0.0"
     },
     "engines": {
         "node": "^18"

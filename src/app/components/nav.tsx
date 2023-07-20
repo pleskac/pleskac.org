@@ -5,6 +5,34 @@ import { css } from "../../../styled-system/css";
 
 export type NavItem = "home" | "blog";
 
+function NavItemComponent(props: {
+    selected: boolean;
+    title: string;
+    href: string;
+}) {
+    const { title, href, selected } = props;
+    return (
+        <Link
+            className={css({
+                bg: { _hover: "background.raised" },
+                borderBottomStyle: "solid",
+                borderBottomColor: "border",
+                borderBottomWidth: selected ? "2px" : 0,
+                marginBottom: selected ? 0 : "2px",
+                padding: "12px",
+                fontWeight: selected ? 700 : undefined,
+                width: "100px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+            })}
+            href={href}
+        >
+            {title}
+        </Link>
+    );
+}
+
 export function NavBar(props: { selected: NavItem }) {
     return (
         <div
@@ -20,29 +48,19 @@ export function NavBar(props: { selected: NavItem }) {
             <nav
                 className={css({
                     display: "flex",
-                    gap: "12px",
+                    gap: "2px",
                 })}
             >
-                <Link
-                    className={css({
-                        bg: { _hover: "background.raised" },
-                        padding: "12px",
-                        fontWeight: props.selected === "home" ? 700 : undefined,
-                    })}
+                <NavItemComponent
                     href="/home"
-                >
-                    Home
-                </Link>
-                <Link
-                    className={css({
-                        bg: { _hover: "background.raised" },
-                        padding: "12px",
-                        fontWeight: props.selected === "blog" ? 700 : undefined,
-                    })}
+                    selected={props.selected === "home"}
+                    title="Home"
+                />
+                <NavItemComponent
                     href="/blog"
-                >
-                    Blog
-                </Link>
+                    selected={props.selected === "blog"}
+                    title="Blog"
+                />
             </nav>
             <input
                 placeholder="search"
