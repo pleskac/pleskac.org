@@ -9,7 +9,7 @@ export default defineConfig({
         tokens: {
             colors: {
                 black: { DEFAULT: { value: "#000" }, 1: { value: "#343434" } },
-                white: { DEFAULT: { value: "#fff" }, 1: { value: "#fafafa" } },
+                white: { DEFAULT: { value: "#fff" }, 1: { value: "#cfcfcf" } },
             },
         },
         semanticTokens: {

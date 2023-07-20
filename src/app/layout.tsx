@@ -7,7 +7,7 @@ import { NavBar } from "./components/nav";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "pleskac.org",
+    title: "Mark Pleskac",
     description: "pleskac.org",
 };
 

@@ -4,7 +4,10 @@ import { css } from "../../../styled-system/css";
 
 export function ClientExample() {
     const [value, setValue] = React.useState(0);
-    const update = () => setValue(value + 1);
+    const update = React.useCallback(
+        () => setValue(value + 1),
+        [value, setValue]
+    );
 
     console.log("This message is on the client");
 

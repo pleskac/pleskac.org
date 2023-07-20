@@ -21,7 +21,7 @@ function NavItemComponent(props: {
                 marginBottom: selected ? 0 : "2px",
                 padding: "12px",
                 fontWeight: selected ? 700 : undefined,
-                width: "100px",
+                minWidth: "100px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -37,7 +37,9 @@ export function NavBar(props: { selected: NavItem }) {
     return (
         <div
             className={css({
+                position: "sticky",
                 display: "flex",
+                top: 0,
                 alignItems: "center",
                 justifyContent: "space-between",
                 borderBottomWidth: "1px",
