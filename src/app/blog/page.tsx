@@ -1,5 +1,6 @@
 import { css } from "../../../styled-system/css";
 import { NavBar } from "../components/nav";
+import { ClientExample } from "./clientexample";
 
 export default function Blog() {
     return (
@@ -13,7 +14,9 @@ export default function Blog() {
                     padding: "50px",
                 })}
             >
-                Blog
+                <span>Blog. I am on the server!</span>
+                <br />
+                <ClientExample />
             </div>
         </>
     );
