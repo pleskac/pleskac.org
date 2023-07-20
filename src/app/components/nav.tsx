@@ -62,15 +62,6 @@ export function NavBar(props: { selected: NavItem }) {
                     title="Blog"
                 />
             </nav>
-            <input
-                placeholder="search"
-                className={css({
-                    bg: "background.raised",
-                    color: "text.raised",
-                    padding: "2px",
-                    margin: "3px",
-                })}
-            />
         </div>
     );
 }

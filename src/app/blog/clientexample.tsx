@@ -5,6 +5,9 @@ import { css } from "../../../styled-system/css";
 export function ClientExample() {
     const [value, setValue] = React.useState(0);
     const update = () => setValue(value + 1);
+
+    console.log("This message is on the client");
+
     return (
         <>
             <span

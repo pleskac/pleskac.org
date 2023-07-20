@@ -1,10 +1,7 @@
-import { css } from "../../../styled-system/css";
-import { NavBar } from "../components/nav";
-import { ClientExample } from "./clientexample";
+import { css } from "../../../../styled-system/css";
+import { NavBar } from "../../components/nav";
 
 export default function Blog() {
-    console.log("This message is on the server only");
-
     return (
         <>
             <NavBar selected={"blog"} />
@@ -17,8 +14,7 @@ export default function Blog() {
                     padding: "50px",
                 })}
             >
-                <span>Blog. I am on the server!</span>
-                <ClientExample />
+                <span>Blog.</span>
             </div>
         </>
     );
