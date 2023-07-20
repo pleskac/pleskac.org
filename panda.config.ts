@@ -31,14 +31,14 @@ export default defineConfig({
                 border: {
                     DEFAULT: {
                         value: {
-                            base: "{colors.white.1}",
-                            _osDark: "{colors.black.1}",
+                            base: "{colors.black.1}",
+                            _osDark: "{colors.white.1}",
                         },
                     },
                     subtle: {
                         value: {
-                            base: "{colors.black.1}",
-                            _osDark: "{colors.white.1}",
+                            base: "{colors.white.1}",
+                            _osDark: "{colors.black.1}",
                         },
                     },
                 },

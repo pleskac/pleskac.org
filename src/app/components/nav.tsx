@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import { css } from "../../../styled-system/css";
 
-export function NavBar() {
+export type NavItem = "home" | "blog";
+
+export function NavBar(props: { selected: NavItem }) {
     return (
         <div
             className={css({
@@ -23,6 +27,7 @@ export function NavBar() {
                     className={css({
                         bg: { _hover: "background.raised" },
                         padding: "12px",
+                        fontWeight: props.selected === "home" ? 700 : undefined,
                     })}
                     href="/home"
                 >
@@ -32,6 +37,7 @@ export function NavBar() {
                     className={css({
                         bg: { _hover: "background.raised" },
                         padding: "12px",
+                        fontWeight: props.selected === "blog" ? 700 : undefined,
                     })}
                     href="/blog"
                 >
