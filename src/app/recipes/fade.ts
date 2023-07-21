@@ -15,6 +15,7 @@ export const fade = cva({
             },
             bg: {
                 height: "100%",
+                overflowY: "auto",
             },
         },
     },
