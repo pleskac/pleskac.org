@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { css } from "../../../styled-system/css";
+import { fade } from "../recipes/fade";
 
 const SingleImage = (props: {
     src: string;
@@ -11,11 +11,7 @@ const SingleImage = (props: {
     return (
         <Image
             onClick={props.onClick}
-            className={css({
-                objectFit: "cover",
-                maskImage:
-                    "linear-gradient(to left, rgba(0,0,0,1), 95%, rgba(0,0,0,0))",
-            })}
+            className={fade({ fill: "image" })}
             src={props.src}
             alt={props.alt}
             fill
