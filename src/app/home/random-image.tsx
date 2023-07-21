@@ -1,48 +1,66 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import { css } from "../../../styled-system/css";
 
+const SingleImage = (props: {
+    src: string;
+    alt: string;
+    onClick: () => void;
+}) => {
+    return (
+        <Image
+            onClick={props.onClick}
+            className={css({
+                objectFit: "cover",
+                maskImage:
+                    "linear-gradient(to left, rgba(0,0,0,1), 90%, rgba(0,0,0,0))",
+            })}
+            src={props.src}
+            alt={props.alt}
+            fill
+        />
+    );
+};
+
 export const RandomImage = () => {
-    const rand = Math.floor(Math.random() * 3);
+    const [rand, setRand] = React.useState(Math.floor(Math.random() * 4));
+
+    const clickImage = React.useCallback(() => {
+        setRand(Math.floor(Math.random() * 4));
+    }, []);
 
     switch (rand) {
         case 0:
             return (
-                <Image
-                    className={css({
-                        objectFit: "cover",
-                        maskImage:
-                            "linear-gradient(to left, rgba(0,0,0,1), 90%, rgba(0,0,0,0))",
-                    })}
+                <SingleImage
                     src="/reflections.jpeg"
                     alt="Mountains and their reflection in water"
-                    fill
+                    onClick={clickImage}
                 />
             );
         case 1:
             return (
-                <Image
-                    className={css({
-                        objectFit: "cover",
-                        maskImage:
-                            "linear-gradient(to left, rgba(0,0,0,1), 90%, rgba(0,0,0,0))",
-                    })}
+                <SingleImage
                     src="/boya-lake.jpeg"
                     alt="A bird on a lake"
-                    fill
+                    onClick={clickImage}
                 />
             );
         case 2:
             return (
-                <Image
-                    className={css({
-                        objectFit: "cover",
-                        maskImage:
-                            "linear-gradient(to left, rgba(0,0,0,1), 90%, rgba(0,0,0,0))",
-                    })}
+                <SingleImage
                     src="/salmon-glacier.jpeg"
                     alt="A glacier in Alaska"
-                    fill
+                    onClick={clickImage}
+                />
+            );
+        case 3:
+            return (
+                <SingleImage
+                    src="/jaspar.jpeg"
+                    alt="A mountain in Canada"
+                    onClick={clickImage}
                 />
             );
         default:
