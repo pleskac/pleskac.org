@@ -39,6 +39,7 @@ export function NavBar(props: { selected: NavItem }) {
             className={css({
                 position: "sticky",
                 display: "flex",
+                zIndex: 2,
                 top: 0,
                 alignItems: "center",
                 justifyContent: "space-between",
