@@ -109,62 +109,51 @@ export default function Home() {
                 })}
             >
                 <IntroSummary />
-                <div
-                    className={css({
-                        position: "relative",
-                        overflowX: "hidden",
-                        overflowY: "auto",
-                    })}
-                >
-                    <div className={fade({ fill: "bg" })}>
-                        <div>
-                            <H2>Experience </H2>
-                            <ExperienceHeader
-                                icon={<Dropbox />}
-                                title="Dropbox"
-                            />
-                            <ExperienceDetail
-                                dates="2018 - present"
-                                title="Senior Software Engineer"
-                                teams={[
-                                    {
-                                        team: "Design Systems",
-                                        description:
-                                            "Component level work and distribution infrastructure. Typescript, React, Python.",
-                                    },
-                                    {
-                                        team: "Retrieval (Search and Browse)",
-                                        description:
-                                            "Features and experiments in the web. Performance optimizations. Typescript, React, Python.",
-                                    },
-                                ]}
-                            />
-                            <ExperienceHeader
-                                icon={<Microsoft />}
-                                title="Microsoft"
-                            />
-                            <ExperienceDetail
-                                dates="2013 - 2018"
-                                title="Software Engineer II"
-                                teams={[
-                                    {
-                                        team: "Azure Boards - Front End",
-                                        description:
-                                            "Worked on the next generation of Azure Boards UI. Typescript, React, C#.",
-                                    },
-                                    {
-                                        team: "PowerApps - Distributed Systems",
-                                        description:
-                                            "Distributed logging and hosting infrastructure. Created Microsoft Flow Connectors and infrastructure. C#, Kusto.",
-                                    },
-                                    {
-                                        team: "Dynamics - Back End Performance",
-                                        description:
-                                            "Optimized SQL stored procedures, optimized and fixed memory leaks in our C kernel, created load testing profiles and hooks into the product. C, Javascript, SQL, C#",
-                                    },
-                                ]}
-                            />
-                        </div>
+                <div className={fade({ fill: "bg" })}>
+                    <div>
+                        <H2>Experience </H2>
+                        <ExperienceHeader icon={<Dropbox />} title="Dropbox" />
+                        <ExperienceDetail
+                            dates="2018 - present"
+                            title="Senior Software Engineer"
+                            teams={[
+                                {
+                                    team: "Design Systems",
+                                    description:
+                                        "Component level work and distribution infrastructure. Typescript, React, Python.",
+                                },
+                                {
+                                    team: "Retrieval (Search and Browse)",
+                                    description:
+                                        "Features and experiments in the web. Performance optimizations. Typescript, React, Python.",
+                                },
+                            ]}
+                        />
+                        <ExperienceHeader
+                            icon={<Microsoft />}
+                            title="Microsoft"
+                        />
+                        <ExperienceDetail
+                            dates="2013 - 2018"
+                            title="Software Engineer II"
+                            teams={[
+                                {
+                                    team: "Azure Boards - Front End",
+                                    description:
+                                        "Worked on the next generation of Azure Boards UI. Typescript, React, C#.",
+                                },
+                                {
+                                    team: "PowerApps - Distributed Systems",
+                                    description:
+                                        "Distributed logging and hosting infrastructure. Created Microsoft Flow Connectors and infrastructure. C#, Kusto.",
+                                },
+                                {
+                                    team: "Dynamics - Back End Performance",
+                                    description:
+                                        "Optimized SQL stored procedures, optimized and fixed memory leaks in our C kernel, created load testing profiles and hooks into the product. C, Javascript, SQL, C#",
+                                },
+                            ]}
+                        />
                     </div>
                 </div>
             </div>

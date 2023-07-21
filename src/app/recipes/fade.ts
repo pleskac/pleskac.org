@@ -14,7 +14,7 @@ export const fade = cva({
                     "linear-gradient(to left, rgba(0,0,0,1), 98%, rgba(0,0,0,0))",
             },
             bg: {
-                /** Nothing specific yet */
+                height: "100%",
             },
         },
     },
