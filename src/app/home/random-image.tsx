@@ -14,7 +14,7 @@ const SingleImage = (props: {
             className={css({
                 objectFit: "cover",
                 maskImage:
-                    "linear-gradient(to left, rgba(0,0,0,1), 90%, rgba(0,0,0,0))",
+                    "linear-gradient(to left, rgba(0,0,0,1), 95%, rgba(0,0,0,0))",
             })}
             src={props.src}
             alt={props.alt}

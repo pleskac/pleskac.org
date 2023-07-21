@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { css } from "../../../styled-system/css";
 
-export type NavItem = "home" | "blog";
+export type NavItem = "home" | "blog" | "resume";
 
 function NavItemComponent(props: {
     selected: boolean;
@@ -60,9 +60,14 @@ export function NavBar(props: { selected: NavItem }) {
                     title="Home"
                 />
                 <NavItemComponent
-                    href="/blog"
+                    href="/resume"
+                    selected={props.selected === "resume"}
+                    title="Resume"
+                />
+                <NavItemComponent
+                    href="/experimental"
                     selected={props.selected === "blog"}
-                    title="Blog"
+                    title="Experimental"
                 />
             </nav>
         </div>
