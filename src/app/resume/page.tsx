@@ -8,10 +8,10 @@ import { Dropbox, Microsoft } from "../components/icons";
 const H2 = (props: { children: React.ReactNode }) => (
     <h2
         className={css({
-            fontWeight: "700",
-            fontSize: "30px",
+            fontWeight: "600",
+            fontSize: "2.5em",
             paddingLeft: "5%",
-            paddingTop: "12px",
+            paddingTop: "0.5em",
         })}
     >
         {props.children}
@@ -21,11 +21,11 @@ const H2 = (props: { children: React.ReactNode }) => (
 const H3 = (props: { children: React.ReactNode }) => (
     <h3
         className={css({
-            fontWeight: "700",
-            fontSize: "22px",
+            fontWeight: "400",
+            fontSize: "2em",
             paddingLeft: "5%",
-            paddingTop: "18px",
-            paddingBottom: "12px",
+            paddingTop: "1em",
+            paddingBottom: "0.5em",
         })}
     >
         {props.children}
@@ -37,7 +37,7 @@ const FlexRow = (props: { children: React.ReactNode }) => (
         className={css({
             display: "flex",
             alignItems: "center",
-            gap: "6px",
+            gap: "0.25em",
         })}
     >
         {props.children}
@@ -63,11 +63,11 @@ const ExperienceDetail = (props: {
             borderLeftWidth: "2px",
             borderLeftStyle: "solid",
             borderLeftColor: "border",
-            padding: "12px",
+            paddingLeft: "1em",
             marginLeft: "5%",
             display: "flex",
             flexDir: "column",
-            gap: "6px",
+            gap: "0.5em",
         })}
     >
         <span className={css({ color: "text.raised" })}>{props.dates}</span>
@@ -78,16 +78,16 @@ const ExperienceDetail = (props: {
             <div
                 key={index}
                 className={css({
-                    borderLeftWidth: "0px",
+                    borderLeftWidth: "0",
                     borderLeftStyle: "solid",
                     borderLeftColor: "border",
                     display: "flex",
                     flexDir: "column",
-                    paddingLeft: "12px",
-                    gap: "6px",
+                    paddingLeft: "1em",
+                    gap: "0.5em",
                 })}
             >
-                <span className={css({ fontSize: "18px" })}>{team.team}</span>
+                <span className={css({ fontSize: "1.25em" })}>{team.team}</span>
                 <p className={css({ color: "text.raised" })}>
                     {team.description}
                 </p>
@@ -120,7 +120,7 @@ export default function Home() {
                                 {
                                     team: "Design Systems",
                                     description:
-                                        "Component level work and distribution infrastructure. Typescript, React, Python.",
+                                        "Component level work and distribution infrastructure with an eye for the integration. Design tokens, theming, packages, accessibility, migrations, and more. Typescript, React, Python.",
                                 },
                                 {
                                     team: "Retrieval (Search and Browse)",

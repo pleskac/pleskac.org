@@ -19,7 +19,7 @@ function NavItemComponent(props: {
                 borderBottomColor: "border",
                 borderBottomWidth: selected ? "2px" : 0,
                 marginBottom: selected ? 0 : "2px",
-                padding: "12px",
+                padding: "1em",
                 fontWeight: selected ? 700 : undefined,
                 minWidth: "100px",
                 display: "flex",

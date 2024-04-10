@@ -10,20 +10,20 @@ export function IntroSummary() {
                 flexDir: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                padding: "50px",
+                padding: "4em",
                 textAlign: "center",
             })}
         >
-            <span className={css({ fontWeight: "700", fontSize: "30px" })}>
+            <h2 className={css({ fontWeight: "200", fontSize: "5em" })}>
                 Mark Pleskač
-            </span>
+            </h2>
             <span>Software Engineer</span>
             <div
                 className={css({
                     display: "flex",
-                    gap: "12px",
+                    gap: "2em",
                     color: "text.raised",
-                    paddingTop: "12px",
+                    paddingTop: "2em",
                 })}
             >
                 <Link href="https://www.github.com/pleskac/" passHref>
