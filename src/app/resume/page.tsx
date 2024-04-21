@@ -43,7 +43,7 @@ const FlexRow = (props: { children: React.ReactNode }) => (
     </div>
 );
 
-const ExperienceHeader = (props: { title: string; icon: React.ReactNode }) => (
+const ResumeHeader = (props: { title: string; icon: React.ReactNode }) => (
     <H3>
         <FlexRow>
             {props.icon}
@@ -52,10 +52,10 @@ const ExperienceHeader = (props: { title: string; icon: React.ReactNode }) => (
     </H3>
 );
 
-const ExperienceDetail = (props: {
+const ResumeDetail = (props: {
     dates: string;
     title: string;
-    teams: { team: string; description?: string }[];
+    subdetails: { title: string; description?: string }[];
 }) => (
     <div
         className={css({
@@ -73,7 +73,7 @@ const ExperienceDetail = (props: {
         <span className={css({ fontWeight: "700", fontSize: "20px" })}>
             {props.title}
         </span>
-        {props.teams.map((team, index) => (
+        {props.subdetails.map((team, index) => (
             <div
                 key={index}
                 className={css({
@@ -86,7 +86,7 @@ const ExperienceDetail = (props: {
                     gap: "0.5em",
                 })}
             >
-                <span className={css({ fontSize: "1.25em" })}>{team.team}</span>
+                <span className={css({ fontSize: "1.25em" })}>{team.title}</span>
                 <p className={css({ color: "text.raised" })}>
                     {team.description}
                 </p>
@@ -112,61 +112,74 @@ export default function Home() {
                 })}
             >
                 <IntroSummary />
-                <div className={css({ background: "background.raised", paddingBottom: '3em' })}>
+                <div className={css({ background: "background.raised", paddingBottom: '3em', lg: { overflowY: 'auto' } })}>
                     <div>
                         <H2>Experience</H2>
-                        <ExperienceHeader icon={<Dropbox />} title="Dropbox" />
-                        <ExperienceDetail
+                        <ResumeHeader icon={<Dropbox />} title="Dropbox" />
+                        <ResumeDetail
                             dates="2018 - present"
                             title="Senior Software Engineer"
-                            teams={[
+                            subdetails={[
                                 {
-                                    team: "Design Systems",
+                                    title: "Design Systems - Front End",
                                     description:
                                         "Component level work and distribution infrastructure with an eye for the integration. Design tokens, theming, packages, accessibility, migrations, and more. Typescript, React, Python.",
                                 },
                                 {
-                                    team: "Retrieval (Search and Browse)",
+                                    title: "Search and Browse - Full Stack",
                                     description:
                                         "Features and experiments in the web. Performance optimizations. Typescript, React, Python.",
                                 },
                             ]}
                         />
-                        <ExperienceHeader
+                        <ResumeHeader
                             icon={<Microsoft />}
                             title="Microsoft"
                         />
-                        <ExperienceDetail
+                        <ResumeDetail
                             dates="2013 - 2018"
                             title="Software Engineer II"
-                            teams={[
+                            subdetails={[
                                 {
-                                    team: "Azure Boards - Full Stack",
+                                    title: "Azure Boards - Full Stack",
                                     description:
                                         "Worked on the next generation of Azure Boards UI. Typescript, React, C#, MSSQL.",
                                 },
                                 {
-                                    team: "PowerApps - Back End (Distributed Systems)",
+                                    title: "PowerApps - Back End (Distributed Systems)",
                                     description:
                                         "Distributed logging and hosting infrastructure. Created Microsoft Flow Connectors and infrastructure. C#, Docker, Kusto.",
                                 },
                                 {
-                                    team: "Dynamics - Back End (Performance)",
+                                    title: "Dynamics - Back End (Performance)",
                                     description:
                                         "Optimized SQL stored procedures, optimized and fixed memory leaks in our C kernel, created load testing profiles and hooks into the product. C++, Javascript, MSSQL, C#",
+                                },
+                                {
+                                    title: "Intern (Summer 2012)",
+                                },
+                                {
+                                    title: "Intern (Summer 2011)",
                                 },
                             ]}
                         />
                     </div>
                     <div>
                         <H2>Education</H2>
-                        <ExperienceHeader icon={<></>} title="University of Nebraska" />
-                        <ExperienceDetail
+                        <ResumeHeader icon={<></>} title="University of Nebraska" />
+                        <ResumeDetail
                             dates="Graduation: 2012"
-                            title="Computer Engineering"
-                            teams={[]}
+                            title="Bachelors of Science in Computer Engineering"
+                            subdetails={[
+                                {
+                                    title: "Raikes School of Computer Science and Mangement"
+                                },
+                                {
+                                    title: "Business Minor"
+                                }
+                            ]}
                         />
-                        </div>
+                    </div>
                 </div>
             </div>
         </>
