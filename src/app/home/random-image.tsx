@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { fade } from "../recipes/fade";
 
 const SingleImage = (props: {
     src: string;
@@ -11,7 +10,6 @@ const SingleImage = (props: {
     return (
         <Image
             onClick={props.onClick}
-            className={fade({ fill: "image" })}
             src={props.src}
             alt={props.alt}
             fill
