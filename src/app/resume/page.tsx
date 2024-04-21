@@ -1,9 +1,8 @@
-import { css } from "../../../styled-system/css";
-import { NavBar } from "../components/nav";
 import React from "react";
-import { IntroSummary } from "../components/intro-summary";
-import { fade } from "../recipes/fade";
+import { css } from "../../../styled-system/css";
 import { Dropbox, Microsoft } from "../components/icons";
+import { IntroSummary } from "../components/intro-summary";
+import { NavBar } from "../components/nav";
 
 const H2 = (props: { children: React.ReactNode }) => (
     <h2
@@ -11,7 +10,7 @@ const H2 = (props: { children: React.ReactNode }) => (
             fontWeight: "600",
             fontSize: "2.5em",
             paddingLeft: "5%",
-            paddingTop: "0.5em",
+            paddingTop: "1.5em",
         })}
     >
         {props.children}
@@ -37,7 +36,7 @@ const FlexRow = (props: { children: React.ReactNode }) => (
         className={css({
             display: "flex",
             alignItems: "center",
-            gap: "0.25em",
+            gap: "0.5em",
         })}
     >
         {props.children}
@@ -103,15 +102,19 @@ export default function Home() {
             <div
                 className={css({
                     display: "grid",
-                    gridTemplateColumns: "40% 60%",
-                    height: "calc(100vh - 51px)",
+                    gridTemplateColumns: "1",
+                    height: "100%",
                     position: "relative",
+                    lg: {
+                        gridTemplateColumns: "40% 60%",
+                        height: "calc(100vh - 51px)",
+                    }
                 })}
             >
                 <IntroSummary />
-                <div className={fade({ fill: "bg" })}>
+                <div className={css({ background: "background.raised", paddingBottom: '3em' })}>
                     <div>
-                        <H2>Experience </H2>
+                        <H2>Experience</H2>
                         <ExperienceHeader icon={<Dropbox />} title="Dropbox" />
                         <ExperienceDetail
                             dates="2018 - present"
@@ -138,23 +141,32 @@ export default function Home() {
                             title="Software Engineer II"
                             teams={[
                                 {
-                                    team: "Azure Boards - Front End",
+                                    team: "Azure Boards - Full Stack",
                                     description:
-                                        "Worked on the next generation of Azure Boards UI. Typescript, React, C#.",
+                                        "Worked on the next generation of Azure Boards UI. Typescript, React, C#, MSSQL.",
                                 },
                                 {
-                                    team: "PowerApps - Distributed Systems",
+                                    team: "PowerApps - Back End (Distributed Systems)",
                                     description:
-                                        "Distributed logging and hosting infrastructure. Created Microsoft Flow Connectors and infrastructure. C#, Kusto.",
+                                        "Distributed logging and hosting infrastructure. Created Microsoft Flow Connectors and infrastructure. C#, Docker, Kusto.",
                                 },
                                 {
-                                    team: "Dynamics - Back End Performance",
+                                    team: "Dynamics - Back End (Performance)",
                                     description:
-                                        "Optimized SQL stored procedures, optimized and fixed memory leaks in our C kernel, created load testing profiles and hooks into the product. C, Javascript, SQL, C#",
+                                        "Optimized SQL stored procedures, optimized and fixed memory leaks in our C kernel, created load testing profiles and hooks into the product. C++, Javascript, MSSQL, C#",
                                 },
                             ]}
                         />
                     </div>
+                    <div>
+                        <H2>Education</H2>
+                        <ExperienceHeader icon={<></>} title="University of Nebraska" />
+                        <ExperienceDetail
+                            dates="Graduation: 2012"
+                            title="Computer Engineering"
+                            teams={[]}
+                        />
+                        </div>
                 </div>
             </div>
         </>
