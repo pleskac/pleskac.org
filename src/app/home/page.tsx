@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <>
             <NavBar selected={"home"} />
-            <div
+            <main
                 className={css({
                     display: "flex",
                     alignItems: 'center',
@@ -15,7 +15,7 @@ export default function Home() {
                 })}
             >
                 <IntroSummary />
-            </div>
+            </main>
         </>
     );
 }

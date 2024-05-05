@@ -19,7 +19,7 @@ function NavItemComponent(props: {
                 borderBottomColor: "border",
                 borderBottomWidth: selected ? "2px" : 0,
                 marginBottom: selected ? 0 : "2px",
-                padding: "1em",
+                padding: "0.5em",
                 fontWeight: selected ? 700 : undefined,
                 minWidth: "100px",
                 display: "flex",
@@ -47,12 +47,14 @@ export function NavBar(props: { selected: NavItem }) {
                 borderBottomStyle: "solid",
                 borderBottomColor: "border.subtle",
                 backgroundColor: "background",
+                paddingTop: "0.5em",
+                paddingLeft: "0.5em"
             })}
         >
             <nav
                 className={css({
                     display: "flex",
-                    gap: "2px",
+                    gap: "0.5em",
                 })}
             >
                 <NavItemComponent

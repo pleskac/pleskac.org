@@ -11,7 +11,7 @@ export function IntroSummary() {
                 alignItems: "center",
                 justifyContent: "center",
                 padding: "4em",
-                textAlign: "center"
+                textAlign: "center",
             })}
         >
             <h2 className={css({ fontWeight: "200", fontSize: "5em" })}>

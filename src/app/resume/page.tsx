@@ -73,46 +73,54 @@ const ResumeDetail = (props: {
         <span className={css({ fontWeight: "700", fontSize: "20px" })}>
             {props.title}
         </span>
-        {props.subdetails.map((team, index) => (
-            <div
-                key={index}
-                className={css({
-                    borderLeftWidth: "0",
-                    borderLeftStyle: "solid",
-                    borderLeftColor: "border",
-                    display: "flex",
-                    flexDir: "column",
-                    paddingLeft: "1em",
-                    gap: "0.5em",
-                })}
-            >
-                <span className={css({ fontSize: "1.25em" })}>{team.title}</span>
-                <p className={css({ color: "text.raised" })}>
-                    {team.description}
-                </p>
-            </div>
-        ))}
+        {props.subdetails && (
+            <ul>
+                {props.subdetails.map((team, index) => (
+                    <li
+                        key={index}
+                        className={css({
+                            borderLeftWidth: "0",
+                            borderLeftStyle: "solid",
+                            borderLeftColor: "border",
+                            display: "flex",
+                            flexDir: "column",
+                            paddingLeft: "1em",
+                            gap: "0.5em",
+                        })}
+                    >
+                        <span className={css({ fontSize: "1.25em" })}>{team.title}</span>
+                        <p className={css({ color: "text.raised" })}>
+                            {team.description}
+                        </p>
+                    </li>
+                ))}</ul>)}
     </div>
 );
 
 export default function Home() {
     return (
-        <>
+        <div className={css({
+            height: "100dvh",
+            overflow: 'hidden'
+        })}>
             <NavBar selected={"resume"} />
             <div
                 className={css({
+                    minHeight: 0,
                     display: "grid",
                     gridTemplateColumns: "1",
                     height: "100%",
                     position: "relative",
+                    overflowY: 'auto',
+                    paddingBottom: '1em',
                     lg: {
+                        overflow: 'hidden',
                         gridTemplateColumns: "40% 60%",
-                        height: "calc(100vh - 51px)",
                     }
                 })}
             >
                 <IntroSummary />
-                <div className={css({ background: "background.raised", paddingBottom: '3em', lg: { overflowY: 'auto' } })}>
+                <main className={css({ background: "background.raised", paddingBottom: '3em', lg: { overflowY: 'auto' } })}>
                     <div>
                         <H2>Experience</H2>
                         <ResumeHeader icon={<Dropbox />} title="Dropbox" />
@@ -180,8 +188,8 @@ export default function Home() {
                             ]}
                         />
                     </div>
-                </div>
+                </main>
             </div>
-        </>
+        </div>
     );
 }
