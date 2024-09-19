@@ -15,7 +15,7 @@ export function IntroSummary() {
         textAlign: 'center',
       })}
     >
-      <h2 className={css({fontWeight: '200', fontSize: '5em'})}>Mark Pleskač</h2>
+      <h1 className={css({fontWeight: '200', fontSize: '5em'})}>Mark Pleskač</h1>
       <span>Software Engineer</span>
       <div
         className={css({
@@ -25,13 +25,13 @@ export function IntroSummary() {
           paddingTop: '2em',
         })}
       >
-        <Link href="https://www.github.com/pleskac/" passHref>
+        <Link href="https://www.github.com/pleskac/" aria-label="GitHub" passHref>
           <GitHubIcon />
         </Link>
-        <Link href="https://www.linkedin.com/in/markpleskac/" passHref>
+        <Link href="https://www.linkedin.com/in/markpleskac/" aria-label="LinkedIn" passHref>
           <LinkedInIcon />
         </Link>
-        <Link href="https://www.instagram.com/pleskac/" passHref>
+        <Link href="https://www.instagram.com/pleskac/" aria-label="Instagram" passHref>
           <InstagramIcon />
         </Link>
       </div>
