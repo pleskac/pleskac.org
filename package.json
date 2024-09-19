@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prepare": "panda codegen",
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "panda codegen && next dev",
+    "build": "panda codegen && next build",
     "clean": "rm -rf .next",
-    "start": "next start",
+    "start": "panda codegen && next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "panda": "panda"
